@@ -1,0 +1,12 @@
+
+data/
+catboost_info/
+
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.jupyter_lab_config
+.DS_Store
+.Rhistory
+.ipynb_checkpoints
+
+__pycache__
