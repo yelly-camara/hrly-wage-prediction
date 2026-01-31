@@ -1,5 +1,4 @@
 fastapi
 uvicorn
 catboost
-enum
 pandas
