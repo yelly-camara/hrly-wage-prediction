@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 from catboost import CatBoostRegressor
+from fastapi.responses import RedirectResponse
 
 app = FastAPI(
     title="Canadian Hourly Wage Predictor",
@@ -259,7 +260,10 @@ model_path = os.path.join(base_dir, "models", "model_v1.cbm")
 model = CatBoostRegressor() 
 model.load_model(model_path) 
 
-
+@app.get("/")
+async def root():
+    return RedirectResponse(url="/docs")
+    
 @app.get("/predict", description="""
     **Model Disclosure:** This model predicts hourly wages based on historical trends. 
     Our analysis indicates higher variance in predictions for men and highly educated professionals.
