@@ -254,9 +254,11 @@ UNION_CODE = {
     Union.NonUnionized: "3",
 }
 
-
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
+model_path = os.path.join(base_dir, "models", "model_v1.cbm")
 model = CatBoostRegressor() 
-model.load_model('../models/model_v1.cbm') 
+model.load_model(model_path) 
+
 
 @app.get("/predict", description="""
     **Model Disclosure:** This model predicts hourly wages based on historical trends. 
