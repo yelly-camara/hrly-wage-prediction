@@ -261,8 +261,13 @@ model = CatBoostRegressor()
 model.load_model(model_path) 
 
 @app.get("/")
-async def root():
-    return RedirectResponse(url="/docs")
+def get_info():
+    return {
+        "app_name": "Hourly Wage Predictor",
+        "version": "1.0.0",
+        "model_type": "CatBoost Regressor",
+        "author": "Yelly Camara"
+    }
     
 @app.get("/predict", description="""
     **Model Disclosure:** This model predicts hourly wages based on historical trends. 
