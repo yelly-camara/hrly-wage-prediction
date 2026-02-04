@@ -25,7 +25,7 @@ Feature Optimization: I used SHAP (Shapley Additive Explanations) to identify wh
 
 API Design: To keep the API user-friendly, I only included the 10 most important features. This prevents users from having to input an excessive amount of information to get a prediction.
 
-Accuracy: The final model achieved a Root Mean Square Error (RMSE) of $5.40.
+Accuracy: The final model achieved a Mean Absolute errors (MAE) of $5.5.
 
 3. Fairness Audit
 
@@ -33,6 +33,6 @@ I performed a fairness check to see if the model's accuracy changes for differen
 
 Tool: Used the Fairlearn library for the analysis.
 
-Goal: Checked for "Predictive Parity"—meaning I looked at whether the model is equally accurate for different genders, provinces, and education levels.
+Goal: Checked for "Predictive Parity"—meaning I looked at whether the model is equally accurate for different genders, provinces, immigration and education levels.
 
 Note: This is an analytical audit; the API provides the raw prediction based on the trained model.
