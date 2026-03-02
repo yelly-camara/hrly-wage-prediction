@@ -333,7 +333,7 @@ def predict_one(
     
 
     result = model.predict(pd.DataFrame([input_data]))
-    prediction = result/100 
+    prediction = np.expm1(result)/100 
 
 
     return {
