@@ -25,7 +25,7 @@ Feature Optimization: I used SHAP (Shapley Additive Explanations) to identify wh
 
 API Design: To keep the API user-friendly, I only included the 10 most important features. This prevents users from having to input an excessive amount of information to get a prediction.
 
-Accuracy: The final model achieved a Mean Absolute errors (MAE) of $5.5.
+Accuracy: The final model achieved a Mean Absolute errors (MAE) of $5.3.
 
 3. Fairness Audit
 
